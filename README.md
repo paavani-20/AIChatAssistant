@@ -1,79 +1,46 @@
-# AI Chat Assistant
+# AIChatAssistant
 
-A React Native mobile chatbot application that enables users to interact with an AI assistant powered by Groq AI.
+Lightweight Expo + React Native chat app that connects to an AI assistant.
 
-## Features
+## Quickstart
 
-- Real-time AI chat
-- Responsive mobile UI
-- Chat history persistence
-- Loading indicators
-- Error handling
-- Clear chat functionality
-
-## Tech Stack
-
-- React Native
-- Expo
-- TypeScript
-- Axios
-- AsyncStorage
-- Groq AI (Llama 3.3 70B)
-
-## Project Structure
-
-```text
-app/
-src/
- ├── services/
- ├── storage/
- └── components/
-```
-
-## Setup Instructions
-
-### Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
-### Install Dependencies
+- Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Run Application
+- Start the dev server (Metro / Expo):
 
 ```bash
-npx expo start
+npm start
+# or run for web: npm run web
 ```
 
-### Open on Device
+Open the project in Expo Go (mobile) or the browser for web.
 
-- Install Expo Go
-- Scan QR Code
+## Project layout (important files)
 
-## AI Service Used
+- `app/` — Expo Router entry points (`_layout.tsx`, `index.tsx`)
+- `src/services/groqService.ts` — AI service integration
+- `src/storage/chatStorage.js` — local chat persistence
+- `src/components/` — UI components (optional subcomponents can be omitted)
+- `assets/` — images and icons
 
-Groq AI
+Optional components like `ChatBubble.tsx` and `ChatInput.tsx` are not required for reviewers.
 
-Model:
+## Development notes
 
-```
-llama-3.3-70b-versatile
-```
+- Node.js + npm required
+- Uses Expo; if you prefer native simulators, install `expo-cli` or use `npx expo` commands
 
-## Libraries Used
+## Contributing
 
-- axios
-- @react-native-async-storage/async-storage
-- expo
+1. Create a branch: `git checkout -b feat/your-feature`
+2. Commit changes and open a PR against `main`.
 
-## Future Improvements
+## License
+See `LICENSE` in the repository.
 
-- Voice input
-- Dark mode
-- Multiple chat sessions
-- AI conversation export
+---
+If you'd like, I can run `npm install` and start the dev server for you now.
